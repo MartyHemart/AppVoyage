@@ -10,12 +10,15 @@ Route::resource('Voyages','VoyageController');
 // Route pour la page "a propos"
 Route::get('a_propos', 'StaticPageController@about')->name('a_propos');
 
+
 // Gestion de l'administration
 Route::prefix('admin')->group(function(){
 
   // Afficher tous les voyages
   Route::resource('voyages','AdminVoyageController', ['as'=>'admin']);
   route::get('/', 'AdminVoyageController@index')->name('index');
+  // Retourne la recherche
+  route::get('search', 'AdminVoyageController@search')->name('search');
   // Modification d'un voyage
   route::get('admin.edit/{voyage_id}', 'AdminVoyageController@edit')->name('edit');
 

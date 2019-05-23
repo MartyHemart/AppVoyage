@@ -122,4 +122,13 @@ class AdminVoyageController extends Controller
         $voyage->delete();
         return redirect('admin');
     }
+
+    public function Search(Voyage $voyage){
+      $search = \Request::get('the_search');
+      $results = Voyage::where('destination', 'like', '%'.$search.'%')
+                     ->orderBy('destination')
+                     ->paginate(20);
+
+      return view('admin/search', ['results'=>$results]);
+    }
 }

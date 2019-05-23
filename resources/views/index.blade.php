@@ -4,6 +4,7 @@
 
 @section('main')
     <!-- Welcome Area Start -->
+
     <section class="welcome-area">
         <div class="welcome-slides owl-carousel">
             <!-- Single Welcome Slide -->

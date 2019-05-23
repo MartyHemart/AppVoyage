@@ -16,5 +16,6 @@
     @yield('create_voyage')
     @yield('update_voyage')
     @yield('info_voyage')
+    @yield('search')
   </body>
 </html>

@@ -135,6 +135,7 @@
 @yield('main')
 @yield('a_propos')
 @yield('detail_voyage')
+@yield('search')
 
 <!-- Footer Area Start -->
 <footer class="footer-area section-padding-80-0">

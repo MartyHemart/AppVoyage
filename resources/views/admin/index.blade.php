@@ -2,7 +2,18 @@
 @extends('layouts.app')
 
 @section('index')
+
 <p class="container">Bienvenue sur la gestion des voyages</p>
+
+<div style="background-color: #08DAC1;padding-top: 30px;  padding-bottom: 30px;" class="container">
+  <h3>Effectuer une recherche</h3>
+  <form  action="{{route('search')}}" method="get">
+    @csrf
+    <input type="search" placeholder="Entrez un mot-clef" name="the_search">
+    <button type="submit" name="button">Recherche</button>
+  </form>
+</div>
+
 <table class="table container">
   <thead>
 
